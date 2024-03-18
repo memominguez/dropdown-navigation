@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Dropdown Navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="sidebar">
+        <ul class="menus">
+          <li class="close-button" onclick="hideSidebar()">
+            <img src="./images/icon-close-menu.svg" alt="Close button" />
+          </li>
+          <li class="features">
+            <a href="#">
+              Features
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow-down"
+              />
+              <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up" />
+            </a>
+            <ul class="features-items">
+              <li>
+                <a href="#">
+                  <img src="./images/icon-todo.svg" alt="To do" />
+                  &nbsp; Todo List
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/icon-calendar.svg" alt="Calendar" />
+                  &nbsp; Calendar
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/icon-reminders.svg" alt="Reminders" />
+                  &nbsp; Reminders
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/icon-planning.svg" alt="Planning" />
+                  &nbsp; Planning
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="company">
+            <a href="">
+              Company
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow-down"
+              />
+              <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up" />
+            </a>
+            <ul class="company-items">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <ul class="logins">
+          <li><a href="#">Login</a></li>
+          <li><a href="#" class="register-border">Register</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar">
+        <div class="navbar-left">
+          <img src="./images/logo.svg" alt="LOGO" />
+          <ul class="menus">
+            <li class="features">
+              <a href="#">
+                Features
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="arrow-down"
+                />
+                <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up" />
+              </a>
+              <ul class="features-items">
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-todo.svg" alt="To do" />
+                    &nbsp; Todo List
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-calendar.svg" alt="Calendar" />
+                    &nbsp; Calendar
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-reminders.svg" alt="Reminders" />
+                    &nbsp; Reminders
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-planning.svg" alt="Planning" />
+                    &nbsp; Planning
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="company">
+              <a href="#">
+                Company
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="arrow-down"
+                />
+                <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up" />
+              </a>
+              <ul class="company-items">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar-right">
+          <ul class="logins">
+            <li><a href="#">Login</a></li>
+            <li><a href="#" class="register-border">Register</a></li>
+          </ul>
+        </div>
+
+        <img
+          src="./images/icon-menu.svg"
+          alt="Menu"
+          class="open-mobile-button"
+          onclick="showSidebar()"
+        />
+      </div>
+    </nav>
+
+    <div class="main-container">   
+    <main>
+      <section class="content-side">
+        <h1>Make remote work</h1>
+        <div class="paragraph">
+          <p>
+            Get your team in sync, no matter your location.           
+            Streamline processes, create team rituals, and watch productivity soar.
+          </p>
+        </div>
+
+        <button>Learn more</button>
+        <div class="some-logos">
+          <img src="./images/client-databiz.svg" alt="data biz">
+          <img src="./images/client-audiophile.svg" alt="audiophile">
+          <img src="./images/client-meet.svg" alt="client meet">
+          <img src="./images/client-maker.svg" alt="client maker">
+        </div>
+      </section>
+      <section class="image-side">
+        <img src="./images/image-hero-desktop.png" alt="hero desktop" class="hero-desktop"/>
+        <img src="./images/image-hero-mobile.png" alt="hero mobile" class="hero-mobile">
+      </section>
+    </main>
+  </div>
+
+  <footer id="overlay"></footer>
+
+    <script>      
+      function showSidebar() {
+        const sideBar = document.querySelector(".sidebar");
+        const overlay = document.getElementById('overlay')
+        sideBar.style.display = "flex";       
+        overlay.style.display = "initial"
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.getElementById('overlay')
+        sidebar.style.display = "none";      
+        overlay.style.display = "none"
+      }
+    </script>
+  </body>
+</html>
