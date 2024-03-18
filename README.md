@@ -73,7 +73,7 @@ The functions below are called for opening or closing the mobile navigation menu
       }   
 ```
 
-Particularly proud of the animated dropdowns. Working in both desktop and mobile screens.
+Testing the dropdowns, they work ok in desktop, on hover. Neither transform or animations worked in a touch screen.
 
 ### Continued development
 
