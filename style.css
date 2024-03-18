@@ -44,7 +44,6 @@ nav .sidebar {
   height: 100vh;
   width: 240px;
   background-color: white;
-  /* box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); */
   /* border: 1px solid var(--almost-black); */
   display: none;
   flex-direction: column;
@@ -68,7 +67,7 @@ nav .sidebar .menus .close-button {
 }
 
 nav .sidebar .menus .features .features-items {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: flex-start;
   width: 280px;
@@ -80,7 +79,7 @@ nav .sidebar .menus .features .features-items {
 }
 
 nav .sidebar .menus .company .company-items {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: flex-start;
   width: 280px;
@@ -115,29 +114,32 @@ nav .sidebar .logins .register-border {
 
 /* ********** Sidebar dropdowns *********** */
 
+
 nav .sidebar .menus .features:hover .features-items {
-  display: block;
-  /* animation: showup 0.7s ease-out; */
+  display: flex;
+  animation: showup 0.7s ease-out;
 }
 
 nav .sidebar .menus .company:hover .company-items {
-  display: block;
-  /* animation: showup 0.7s ease-out; */
+  display: flex;
+  animation: showup 0.7s ease-out;
 }
 
 nav .sidebar ul li .arrow-up {
   display: none;
 }
 
+
 nav .sidebar ul li:hover .arrow-up {
   display: initial;
 }
+
 
 nav .sidebar ul li:hover .arrow-down {
   display: none;
 }
 
-/* 
+
 @keyframes showup {
   from {
     transform: translateX(250px);
@@ -145,7 +147,7 @@ nav .sidebar ul li:hover .arrow-down {
   to {
     transform: translateX(0);
   }
-} */
+}
 
 /* ************* Navbar *************** */
 
