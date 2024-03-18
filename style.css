@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   font-family: "Epilogue", sans-serif;
   /* background-color: rgb(197, 170, 223); */
-  background-color: var(--almost-white); 
+  background-color: var(--almost-white);
 }
 
 nav {
@@ -67,7 +67,7 @@ nav .sidebar .menus .close-button {
 }
 
 nav .sidebar .menus .features .features-items {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 280px;
@@ -75,19 +75,27 @@ nav .sidebar .menus .features .features-items {
   background-color: white;
   padding: 15px;
   border-radius: 8px;
+  animation: showup 0.5s ease-out;
+}
+
+.hidden {
   display: none;
 }
 
+.flex-visible {
+  display: flex;
+}
+
 nav .sidebar .menus .company .company-items {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 280px;
   line-height: 3;
-  background-color: white; 
+  background-color: white;
   padding: 15px;
   border-radius: 8px;
-  display: none;
+  animation: showup 0.5s ease-out;
 }
 
 nav .sidebar .logins {
@@ -114,31 +122,17 @@ nav .sidebar .logins .register-border {
 
 /* ********** Sidebar dropdowns *********** */
 
-
-nav .sidebar .menus .features:hover .features-items {
-  display: flex;
-  animation: showup 0.7s ease-out;
-}
-
-nav .sidebar .menus .company:hover .company-items {
-  display: flex;
-  animation: showup 0.7s ease-out;
-}
-
-nav .sidebar ul li .arrow-up {
+.hidden {
   display: none;
 }
 
-
-nav .sidebar ul li:hover .arrow-up {
-  display: initial;
+.visible {
+  display: block;
 }
 
-
-nav .sidebar ul li:hover .arrow-down {
-  display: none;
+.arrow-visible {
+  display: inline;
 }
-
 
 @keyframes showup {
   from {
@@ -275,28 +269,21 @@ nav .navbar .navbar-left .company:hover ul {
 /* *********** Main content *********** */
 
 .main-container {
- display: flex;
- flex-direction: column;
- align-items: center;
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
   max-width: 930px;
-  margin-top: 10px;
-  /* margin-inline: auto; */
-  /* height: 580px; */
-  height: fit-content;
-  /* aspect-ratio: 1.875; */
-  display: flex;
-  /* background-color: aquamarine; */
+  margin-top: 10px; 
+  height: fit-content; 
+  display: flex; 
 }
 
-main .content-side {
-  /* flex-basis: 67%; */
+main .content-side {  
   width: 60%;
-  padding: 4.5rem 6rem 1rem 2rem;
-  /* background-color: aquamarine; */
+  padding: 4.5rem 6rem 1rem 2rem; 
 }
 
 main .content-side h1 {
@@ -305,15 +292,14 @@ main .content-side h1 {
 }
 
 main .content-side .paragraph {
-  width: 87%;
-  /* background-color: yellow; */
+  width: 87%; 
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 2.7rem;
 }
 
-button {
-  background: var(--almost-black);
+#hoverButton {
+  background-color: var(--almost-black);
   padding: 12px 22px 12px 22px;
   border-radius: 10px;
   color: var(--almost-white);
@@ -323,8 +309,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: transparent;
+#hoverButton.hover {
+  background-color: transparent;
   color: var(--almost-black);
 }
 
@@ -340,22 +326,18 @@ main .content-side .some-logos img {
   height: 17%;
 }
 
-main .image-side {
-  /* flex-basis: 33%; */
+main .image-side { 
   width: 40%;
 }
 
 main .image-side .hero-desktop {
-  display: block;
-  /* height: 100%; */
+  display: block; 
   width: 100%;
-  /* aspect-ratio: 0.75; */
   object-fit: cover;
 }
 
 main .image-side .hero-mobile {
-  display: none;
-  /* height: 100%; */
+  display: none; 
   width: 100%;
   aspect-ratio: 1.33;
 }
@@ -368,39 +350,37 @@ main .image-side .hero-mobile {
   }
 
   main .content-side {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 4rem 1rem 1rem 1rem;
-  }  
-  
+  }
+
   main .content-side h1 {
     font-size: 2.1rem;
     margin-bottom: 1.8rem;
   }
 
-main .content-side .paragraph {
-  width: 96%;
-  text-align: center;
-  /* background-color: yellow; */
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 2.7rem;
-}
+  main .content-side .paragraph {
+    width: 96%;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 2.7rem;
+  }
 
-button {
-  margin-bottom: 3.5rem;
-}
+  button {
+    margin-bottom: 3.5rem;
+  }
 
-
-main .content-side .some-logos {
-  padding-right: 0;
-  padding-inline: 8px;
-}
+  main .content-side .some-logos {
+    padding-right: 0;
+    padding-inline: 8px;
+  }
 
   main .image-side {
-   width: 100%;
+    width: 100%;
   }
 
   main .image-side .hero-desktop {

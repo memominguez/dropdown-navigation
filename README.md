@@ -38,8 +38,11 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: Pending
-- Live Site URL: Pending
+
+- Solution URL:  [Github repository](https://github.com/memominguez/dropdown-navigation
+)
+- Live Site URL:  [Github pages](https://memominguez.github.io/dropdown-navigation/
+)
 
 ## My process
 
@@ -55,7 +58,7 @@ Users should be able to:
 
 Another experience with responsive menu bars. This time adding a dark semi-transparent overlay while displaying the mobile navigation menu.
 
-The functions below are called for opening or closing the mobile navigation menu.
+The functions below are called for opening or closing the mobile navigation menu, along with overlay activation.
 
 ```js      
       function showSidebar() {
@@ -73,7 +76,41 @@ The functions below are called for opening or closing the mobile navigation menu
       }   
 ```
 
-Testing the dropdowns, they work ok in desktop, on hover. Neither transform or animations worked in a touch screen.
+For the mobile menu, instead of hover actions, 'click' events are configured for dropdowns toggle.
+
+
+For the only button button on the page body, 'hover' action is replaced by 'mouseenter' and  'mouseleave' events.
+
+
+```js        
+// Desktop hover effect
+hoverButton.addEventListener("mouseenter", function () {
+  this.classList.add("hover");
+});
+
+hoverButton.addEventListener("mouseleave", function () {
+  this.classList.remove("hover");
+});
+```
+
+
+For the same button, on mobile screens, the equivalent to 'hover' is configured by 'touchstart' and 'touchend' events.
+
+```js        
+// Mobile touch effect
+hoverButton.addEventListener("touchstart", function () {
+    this.classList.add("hover");
+  }, { passive: true }
+);
+
+hoverButton.addEventListener("touchend", function () {
+    this.classList.remove("hover");
+  }, { passive: true }
+);
+```
+
+
+
 
 ### Continued development
 
@@ -85,7 +122,7 @@ Some ideas taken from video tutorials, specially this below
 
 - [Responsive dropdown navigation menu](https://www.youtube.com/watch?v=bk3Y4heVdFs) - Use of nested ul li ul li elements as basis for creating dropdown menus.
 
-Also, some tips provided by ChatGPT for creating the overlay.
+Also, some suggested code snippets were provided by ChatGPT: for the overlay and mouse events.
 
 ## Author
 
@@ -98,4 +135,6 @@ Also, some tips provided by ChatGPT for creating the overlay.
 
 
 Thanks to all those who share their knowledge, free of charge, through video tutorials in the youtube platform.
+
+Thanks to the creators and sponsors of ChatGPT and similar tools.
  

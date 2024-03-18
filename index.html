@@ -30,52 +30,61 @@
               <img
                 src="./images/icon-arrow-down.svg"
                 alt=""
-                class="arrow-down"
+                id="arrow-down-features"
+                class="arrow-visible"
               />
-              <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up" />
+              <img src="./images/icon-arrow-up.svg" alt="" id="arrow-up-features" class="hidden" />
             </a>
-            <ul class="features-items">
-              <li>
-                <a href="#">
-                  <img src="./images/icon-todo.svg" alt="To do" />
-                  &nbsp; Todo List
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./images/icon-calendar.svg" alt="Calendar" />
-                  &nbsp; Calendar
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./images/icon-reminders.svg" alt="Reminders" />
-                  &nbsp; Reminders
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./images/icon-planning.svg" alt="Planning" />
-                  &nbsp; Planning
-                </a>
-              </li>
-            </ul>
+
+            <div id="features-items" class="hidden">
+              <ul class="features-items">
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-todo.svg" alt="To do" />
+                    &nbsp; Todo List
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-calendar.svg" alt="Calendar" />
+                    &nbsp; Calendar
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-reminders.svg" alt="Reminders" />
+                    &nbsp; Reminders
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./images/icon-planning.svg" alt="Planning" />
+                    &nbsp; Planning
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
+
           <li class="company">
-            <a href="">
+            <a href="#">
               Company
               <img
                 src="./images/icon-arrow-down.svg"
                 alt=""
-                class="arrow-down"
+                id="arrow-down-company"
+                class="arrow-visible"
               />
-              <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up" />
+              <img src="./images/icon-arrow-up.svg" alt="" id="arrow-up-company" class="hidden" />
             </a>
-            <ul class="company-items">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+
+            <div id="company-items" class="hidden">
+              <ul class="company-items">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
           </li>
 
           <li><a href="#">Careers</a></li>
@@ -165,49 +174,43 @@
       </div>
     </nav>
 
-    <div class="main-container">   
-    <main>
-      <section class="content-side">
-        <h1>Make remote work</h1>
-        <div class="paragraph">
-          <p>
-            Get your team in sync, no matter your location.           
-            Streamline processes, create team rituals, and watch productivity soar.
-          </p>
-        </div>
+    <div class="main-container">
+      <main>
+        <section class="content-side">
+          <h1>Make remote work</h1>
+          <div class="paragraph">
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
 
-        <button>Learn more</button>
-        <div class="some-logos">
-          <img src="./images/client-databiz.svg" alt="data biz">
-          <img src="./images/client-audiophile.svg" alt="audiophile">
-          <img src="./images/client-meet.svg" alt="client meet">
-          <img src="./images/client-maker.svg" alt="client maker">
-        </div>
-      </section>
-      <section class="image-side">
-        <img src="./images/image-hero-desktop.png" alt="hero desktop" class="hero-desktop"/>
-        <img src="./images/image-hero-mobile.png" alt="hero mobile" class="hero-mobile">
-      </section>
-    </main>
-  </div>
+          <button id="hoverButton">Learn more</button>
 
-  <footer id="overlay"></footer>
+          <div class="some-logos">
+            <img src="./images/client-databiz.svg" alt="data biz" />
+            <img src="./images/client-audiophile.svg" alt="audiophile" />
+            <img src="./images/client-meet.svg" alt="client meet" />
+            <img src="./images/client-maker.svg" alt="client maker" />
+          </div>
+        </section>
+        <section class="image-side">
+          <img
+            src="./images/image-hero-desktop.png"
+            alt="hero desktop"
+            class="hero-desktop"
+          />
+          <img
+            src="./images/image-hero-mobile.png"
+            alt="hero mobile"
+            class="hero-mobile"
+          />
+        </section>
+      </main>
+    </div>
 
-    <script>      
-      function showSidebar() {
-        const sideBar = document.querySelector(".sidebar");
-        const overlay = document.getElementById('overlay')
-        sideBar.style.display = "flex";       
-        overlay.style.display = "initial"
-      }
+    <footer id="overlay"></footer>
 
-      function hideSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        const overlay = document.getElementById('overlay')
-        sidebar.style.display = "none";      
-        overlay.style.display = "none"
-      }
-    </script>
-    
+    <script src="script.js"></script>
   </body>
 </html>
