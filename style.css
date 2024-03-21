@@ -147,9 +147,12 @@ nav .sidebar .logins .register-border {
 
 nav .navbar {
   width: 100%;
+  padding-inline: calc(100vw * 0.2 - 140px);
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2rem 2rem 2rem;
+  /* padding: 2rem 2rem 2rem 2rem; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   margin-bottom: 18px;
 }
 
@@ -252,6 +255,10 @@ nav .navbar .navbar-left .company:hover ul {
 /* ******** NAV responsive ******* */
 
 @media screen and (max-width: 800px) {
+  nav .navbar {
+    padding-inline: 20px;
+  }
+
   /* Hide navbar elements */
   nav .navbar .navbar-left .menus {
     display: none;
